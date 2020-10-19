@@ -5,7 +5,17 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    setlocale(LC_ALL, "RUS");
+    int b, c, P, S, a;
+    printf("введите a: ");
+    scanf_s("%d", &a);
+    printf("введите b: ");
+    scanf_s("%d", &b);
+    printf("введите c: ");
+    scanf_s("%d", &c);
+    P = (a + b + c) / 2;
+    S = pow((P * (P - a) * (P - b) * (P - c)), 0.5);
+    printf("площадь равна: " "%d", S);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
