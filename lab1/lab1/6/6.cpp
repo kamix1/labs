@@ -5,7 +5,21 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    setlocale(LC_ALL, "rus");
+    long long sec, min, hour, day, year, all;//использую тип long long потому что с типом int происходит переполнение и мы получим неверное число
+    sec = 60;//1
+    min = 60;
+    hour = 24;
+    day = 365;
+    year = 1;
+    all = sec * min * hour * day * year;
+    printf("столько секунд в 1 году: %lli\n", all);
+    year = 100;
+    all = sec * min * hour * day * year;
+    printf("столько секунд в 100 годах: %lli\n", all);
+    year = 1000;
+    all = sec * min * hour * day * year;
+    printf("столько секунд в 1000 годах: %lli", all);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

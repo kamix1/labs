@@ -5,7 +5,22 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    //1 способ
+        int a = 20;
+    int b = 43;
+    printf("%d %d \n", a, b);
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    printf("%d %d \n\n\n\n", a, b);
+    //2 способ
+    int c = 2, d = 3, e;
+    printf("%d %d \n", c, d);
+    e = c;
+    c = d;
+    d = e;
+    printf("%d %d \n", c, d);
+
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

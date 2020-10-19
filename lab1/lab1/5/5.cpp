@@ -5,7 +5,13 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    setlocale(LC_ALL, "rus");
+	printf("введите свое число: ");
+	int a, b;
+	scanf_s("%d", &a);
+	b = a + 1;
+	printf("число компьютра: %d\n", b);
+	printf("вы проиграли!");
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
