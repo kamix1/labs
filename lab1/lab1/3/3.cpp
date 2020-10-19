@@ -5,7 +5,15 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	system("chcp 1251");
+	system("cls");
+	int a, b, c, d;
+	printf("введите число: ");
+	scanf_s("%d", &a);
+	b = a * a;
+	c = b * b;
+	d = c * c;
+	printf("ответ= %d", &d);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
