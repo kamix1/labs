@@ -22,7 +22,7 @@ int main()
 
 // решение проблемы
     setlocale(LC_ALL, "rus");
-    long long sec1, min1, hour1, day1, year1, all1;//использую тип long long потому что с типом int происходит переполнение и мы получим неверное число
+    long long sec1, min1, hour1, day1, year1, all1;//использую тип long long потому что с типом int происходит переполнение и мы получим неверное число.
     sec1 = 60;
     min1 = 60;
     hour1 = 24;
