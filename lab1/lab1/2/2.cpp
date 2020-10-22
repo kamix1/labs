@@ -2,6 +2,8 @@
 //
 
 #include <iostream>
+#include <math.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -15,7 +17,7 @@ int main()
     scanf_s("%d", &c);
     P = (a + b + c) / 2;
     S = pow((P * (P - a) * (P - b) * (P - c)), 0.5);
-    printf("площадь равна: " "%d", S);
+    printf("площадь равна: " "%d\n", S); 
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

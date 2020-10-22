@@ -2,6 +2,8 @@
 //
 
 #include <iostream>
+#include <math.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -13,7 +15,7 @@ int main()
 	b = a * a;
 	c = b * b;
 	d = c * c;
-	printf("ответ= %d", &d);
+	printf("ответ= %d", d);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

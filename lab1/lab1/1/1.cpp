@@ -5,13 +5,13 @@
 
 int main()
 {
-   setlocale(LC_ALL, "rus");
-   printf("размер типа int - %d\n", sizeof(int));
-   printf("размер типа short - %d\n", sizeof(short));
-   printf("размер типа long - %d\n", sizeof(long));
-   printf("размер типа char - %d\n", sizeof(char));
-   printf("размер типа float - %d\n", sizeof(float));
-   printf("размер типа double - %d\n", sizeof(double));
+	setlocale(LC_ALL, "rus");
+	printf("размер типа int - %d\n", sizeof(int));
+	printf("размер типа short - %d\n", sizeof(short));
+	printf("размер типа long - %d\n", sizeof(long));
+	printf("размер типа char - %d\n", sizeof(char));
+	printf("размер типа float - %d\n", sizeof(float));
+	printf("размер типа double - %d\n", sizeof(double));
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

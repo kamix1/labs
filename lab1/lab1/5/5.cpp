@@ -6,6 +6,7 @@
 int main()
 {
     setlocale(LC_ALL, "rus");
+	printf("поиграем в игру.\nкто введет большее число тот и победил.\n");
 	printf("введите свое число: ");
 	int a, b;
 	scanf_s("%d", &a);

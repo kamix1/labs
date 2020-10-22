@@ -5,21 +5,37 @@
 
 int main()
 {
-    setlocale(LC_ALL, "rus");
-    long long sec, min, hour, day, year, all;//использую тип long long потому что с типом int происходит переполнение и мы получим неверное число
-    sec = 60;//1
+    int sec, min, hour, day, year, all;
+    sec = 60;
     min = 60;
     hour = 24;
     day = 365;
     year = 1;
     all = sec * min * hour * day * year;
-    printf("столько секунд в 1 году: %lli\n", all);
+    printf("столько секунд в 1 году: %d\n", all);
     year = 100;
     all = sec * min * hour * day * year;
-    printf("столько секунд в 100 годах: %lli\n", all);
+    printf("столько секунд в 100 годах: %d\n", all);
     year = 1000;
     all = sec * min * hour * day * year;
-    printf("столько секунд в 1000 годах: %lli", all);
+    printf("столько секунд в 1000 годах: %d\n\n\n\n", all);
+
+// решение проблемы
+    setlocale(LC_ALL, "rus");
+    long long sec1, min1, hour1, day1, year1, all1;//использую тип long long потому что с типом int происходит переполнение и мы получим неверное число
+    sec1 = 60;
+    min1 = 60;
+    hour1 = 24;
+    day1 = 365;
+    year1 = 1;
+    all1 = sec1 * min1 * hour1 * day1 * year1;
+    printf("столько секунд в 1 году: %lli\n", all1);
+    year1 = 100;
+    all1 = sec1 * min1 * hour1 * day1 * year1;
+    printf("столько секунд в 100 годах: %lli\n", all1);
+    year1 = 1000;
+    all1 = sec1 * min1 * hour1 * day1 * year1;
+    printf("столько секунд в 1000 годах: %lli", all1);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
