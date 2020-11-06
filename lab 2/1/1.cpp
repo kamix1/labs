@@ -11,27 +11,26 @@
 int main(void)
 {
 	setlocale(LC_ALL, "rus");
-	/*char name1[10], name2[10], name3[10];
+	char name1[10], name2[8], name3[10];
 	unsigned short number1, number2, number3;
 	long profit1, profit2, profit3;
-	float market1, market2, market3;*/
+	float market1, market2, market3;
 
-	char name1[7] = "oracle", name2[4] = "IBM", name3[10] = "Microsoft";
+	/*char name1[7] = "oracle", name2[4] = "IBM", name3[10] = "Microsoft";
 	unsigned short number1 = 1, number2 = 3, number3 = 2;
 	unsigned long profit1 = 2488000000, profit2 = 2392000000 , profit3 = 1048000000;
-	float market1 = 31.1, market2 = 29.9, market3 = 13.1;
+	float market1 = 31.1, market2 = 29.9, market3 = 13.1;*/
 	
 
 	/* фактические данные */
-	/*printf("введите название: ");
-	scanf_s("%s", name1, 8);
+	printf("введите название: ");
+	scanf_s("%s", name1, 10);
 	printf("количество продукта: ");
 	scanf_s("%hu", &number1);
 	printf("годовой объем продаж: ");
 	scanf_s("%lu", &profit1);
 	printf("часть рынка: ");
 	scanf_s("%f", &market1);
-	//printf("%s %hu %lu %f\n", name1, number1, profit1, market1);
 
 	printf("введите название: ");
 	scanf_s("%s", name2, 8);
@@ -41,27 +40,30 @@ int main(void)
 	scanf_s("%lu", &profit2);
 	printf("часть рынка: ");
 	scanf_s("%f", &market2);
-	//printf("%s %hu %lu %f\n", name2, number2, profit2, market2);
 
 	printf("введите название: ");
-	scanf_s("%s", name3, 8);
+	scanf_s("%s", name3, 10);
 	printf("количество продукта: ");
 	scanf_s("%hu", &number3);
 	printf("годовой объем продаж: ");
 	scanf_s("%lu", &profit3);
 	printf("часть рынка: ");
-	scanf_s("%f", &market3);*/
+	scanf_s("%f", &market3);
 	//printf("%s %hu %lu %f", name3, number3, profit3, market3);
 	//вывод таблицы 
 	//вывод заголовка 
-	printf("-----------------------------------------------------------------------------\n");
-	printf("| Фирмы - производители СКБД                                                |\n");
-	printf("|---------------------------------------------------------------------------|\n");
-	printf("| Фирма      | Количество продуктов | Годовой объем продажи ($) | Часть рынка (%) |\n");
-	/* вывод стро к фактических данных */
-	printf("|%7s     | %hu                    |%10lu                 | %-4.1f |\n", name1, number1, profit1, market1);
-	printf("|%3s         | %hu                    |%10lu                 | %-4.1f |\n", name2, number2, profit2, market2);
-	printf("|%10s  | %hu                    |%10lu                 | %-4.1f |\n", name3, number3, profit3, market3);
+	printf("-----------------------------------------------------------------------------------\n");
+	printf("| Фирмы - производители СКБД                                                      |\n");
+	printf("|---------------------------------------------------------------------------------|\n");
+	printf("| Фирма       | Количество продуктов | Годовой объем продажи ($) | Часть рынка (%%)|\n");
+	printf("|-------------|----------------------|---------------------------|----------------|\n");
+	/* вывод строк фактических данных */
+	printf("|%7s      | %hu                    |%10lu                 | %-4.1f           |\n", name1, number1, profit1, market1);
+	printf("|%4s         | %hu                    |%10lu                 | %-4.1f           |\n", name2, number2, profit2, market2);
+	printf("|%10s   | %hu                    |%10lu                 | %-4.1f           |\n", name3, number3, profit3, market3);
+	printf("|---------------------------------------------------------------------------------|\n");
+	printf("|Примечание: по данным Gartner Group за 1999г                                     |\n");
+	printf("-----------------------------------------------------------------------------------\n");
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
