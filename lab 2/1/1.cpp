@@ -11,16 +11,15 @@
 int main(void)
 {
 	setlocale(LC_ALL, "rus");
+	char name1[7] = "oracle", name2[4] = "IBM", name3[10] = "Microsoft";
+	unsigned short number1 = 1, number2 = 3, number3 = 2;
+	unsigned long profit1 = 2488000000, profit2 = 2392000000, profit3 = 1048000000;
+	float market1 = 31.1f, market2 = 29.9f, market3 = 13.1f;
+
 	/*char name1[10], name2[8], name3[10];
 	unsigned short number1, number2, number3;
 	long profit1, profit2, profit3;
-	float market1, market2, market3;*/
-
-	char name1[7] = "oracle", name2[4] = "IBM", name3[10] = "Microsoft";
-	unsigned short number1 = 1, number2 = 3, number3 = 2;
-	unsigned long profit1 = 2488000000, profit2 = 2392000000 , profit3 = 1048000000;
-	float market1 = 31.1f, market2 = 29.9f, market3 = 13.1f;
-	
+	float market1, market2, market3;
 
 	/* фактические данные */
 	/*printf("введите название: ");
@@ -48,7 +47,7 @@ int main(void)
 	printf("годовой объем продаж: ");
 	scanf_s("%lu", &profit3);
 	printf("часть рынка: ");
-	scanf_s("%f", &market3);
+	scanf_s("%f", &market3);*/
 	//printf("%s %hu %lu %f", name3, number3, profit3, market3);*/
 	//вывод таблицы 
 	//вывод заголовка 
