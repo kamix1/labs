@@ -9,7 +9,11 @@
 int main(void)
 {
 	setlocale(LC_ALL, "rus");
-	double a, x, d, b, y, c, n, t1, t2, ax, k;
+	/* параметры, которые вводятся */
+	double x, y;
+	double a = 2, d = 15, b = 8, c = 0.5, n = 3; /* параметры, которые задаются в программе */
+	double t1, t2; /* результаты */
+	double ax, k;  /* рабочие переменные */
 	/*a * x + b > 0;
 	y * x + d > 0;
 	c != 0;
@@ -17,10 +21,9 @@ int main(void)
 	y != 0;*/
 	printf("введите x, y :");
 	scanf_s("%lf %lf", &x, &y);
-	n = 3, a = 2, b = 8, d = 15, c = 0.5;
 	ax = a * x;
-	k = n - 1;
 	t1 = (((b * log(ax + b)) / a) + ((d * log(y * x + d)) / y)) / c;
+	k = n - 1;
 	t2 = (1 / (a * k)) * (sin(ax) / pow(cos(ax), k));
 	printf("%lg\n%lg", t1, t2);
 
