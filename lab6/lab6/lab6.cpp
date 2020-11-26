@@ -1,24 +1,31 @@
-﻿// lab5b.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// lab6.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
+#include <iostream>
 #include <stdio.h>
-#include <locale.h>
+#include <math.h>
 
-int main()
+int main(void)
 {
-    setlocale(LC_ALL, "rus");
-    int x;
-    printf("сколько у меня грибов: ");
-    scanf_s("%d", &x);
-    if (x % 100 == 11 || x % 100 == 12 || x % 100 == 13 || x % 100 == 14)
-        printf("у меня %d грибов\n", x);
-    if (x % 10 == 1 && x % 100 != 11 || x % 100 != 12 || x % 100 != 13 || x % 100 != 14 || x % 100 != 15 || x % 100 != 16 || x % 100 != 17 || x % 100 != 18 || x % 100 != 19 || x % 100 != 10)
-        printf("у меня %d гриб\n", x);
-    if (x % 10 == 2 && x != 12 || x % 10 == 3 && x != 13 || x % 10 == 4 && x != 14)
-        printf("у меня %d гриба\n", x);
-    if (x % 10 > 4 || x % 10 == 0)
-        printf("у меня %d грибов\n", x);
-    return main() ;
+    system("chcp 1251");
+    system("cls");
+    long n;
+    double dbln;
+    double sum = 0;
+    double term;
+    const double eps = 0.000001;
+    short k1 = 1;
+    for (n = 0; ; n++, k1 = -k1)
+    {
+        term = k1 * ((n + 1) / (pow(n, 3) + 2));
+        if (fabs(term) >= eps)
+            sum += term;
+        else break;
+        if (n == 9)
+            printf("Сумма 10 членов ряда = %10.7lf\n", sum);
+    }
+    printf("Полная сумма ряда = %10.7lf\n", sum);
+    return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
