@@ -1,30 +1,41 @@
-﻿// lab6.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// Lab7.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
 #include <iostream>
 #include <stdio.h>
-#include <math.h>
 
-int main(void)
+int main()
 {
-    system("chcp 1251");
-    system("cls");
-    long n;
-    double sum = 0;
-    double term;
-    const double eps = 0.000001;
-    short k1 = 1;
-    for (n = 0; ; n++, k1 = -k1)
-    {
-        term = k1 * ((n + 1) / (pow(n, 3) + 2));
-        if (fabs(term) >= eps)
-            sum += term;
-        else break;
-        if (n == 9)
-            printf("Сумма 10 членов ряда = %10.7lf\n", sum);
-    }
-    printf("Полная сумма ряда = %10.7lf\n", sum);
-    return 0;
+	setlocale(LC_ALL, "Russian");
+	short n;
+	double x, y, a;
+	short h;
+	for (n = 0; n < 5; n++)
+	{
+		printf("|   x   |   y   |\n");
+		printf("|-------|-------|\n");
+		for (x = 0; x < 4; x += 0.25)
+		{
+			if (x < 1 || x >= 3)
+				y = 1;
+			else if (x <= 2 && x > 1)
+				y = 3 - 2 * x;
+			else if (x > 2 && x < 3)
+				y = -5 + 2 * x;
+			printf("| %5.2lf | %5.2lf |", x + n * 4, y);
+			a = (y + 1) * 5;
+			h = a;
+			if (a - h >= 0.1)
+			{
+				h++;
+			}
+			for (; h > 0; h--) printf(" ");
+			printf("*\n");
+		}
+		printf("\nНажмите клавишу Enter...");
+		getchar();
+	}
+	return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
