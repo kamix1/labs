@@ -1,40 +1,23 @@
-﻿// lab9.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// lab5a.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-
 #include <iostream>
-#include <iomanip>
-using namespace std;
-#define N 9
-#define M 9
+
 
 int main()
 {
-	setlocale(LC_ALL, "rus");
-	int A[N][M];
-	srand(time(NULL));
-	for (int i = 0; i < N; i++)
-	{
-		for (int j = 0; j < M; j++)
-		{
-			A[i][j] = rand() % 100 - 0;
-			cout << setw(4) << A[i][j];
+    setlocale(LC_ALL, "rus");
+    double x, a, b, c, x1, x2;
+    printf("введите значения для уравнения a*x^2+b*x+c\n");
+    printf( "a = ");
+    scanf_s("%lf\n", &a);
+    printf("b = ");
+    scanf_s("%lf", &b);
+    printf("c = ");
+    scanf_s("%lf", &c);
+   
 
-		}
-		cout << endl;
-	}
-	cout << endl;
-	for (int i = 0; i < M; i++)
-	{
-		for (int j = 0; j < N; j++)
-		{
-			cout << setw(4) << A[j][i];
-
-		}
-		cout << endl;
-	}
 }
-
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
