@@ -1,32 +1,11 @@
-﻿// lab11.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// lab1(2).cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-
 
 #include <iostream>
 
-using namespace std;
-
-//
-void fun(int N)
-{
-	if (N < 0) { cout << "ваше число не положительное"; return; }
-	int c;
-	c = N % 10;
-	N = N / 10;
-	if (N > 0) fun(N);
-	cout << c << endl;
-}
-
 int main()
 {
-	setlocale(LC_ALL, "rus");
-	//int c;
-	int N;
-	cout << "введите число: ";
-	cin >> N;
-	fun(N);
-	//cout << c << endl;
-	return main();
+    
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

@@ -1,33 +1,41 @@
-﻿// lab11.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// lab 2 (2).cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
+#include "Header.h"
 
-#include <iostream>
 
-using namespace std;
 
-//
-void fun(int N)
-{
-	if (N < 0) { cout << "ваше число не положительное"; return; }
-	int c;
-	c = N % 10;
-	N = N / 10;
-	if (N > 0) fun(N);
-	cout << c << endl;
-}
 
 int main()
 {
-	setlocale(LC_ALL, "rus");
-	//int c;
-	int N;
-	cout << "введите число: ";
-	cin >> N;
-	fun(N);
-	//cout << c << endl;
-	return main();
+    setlocale(LC_ALL, "rus");
+    int x;
+    for ( ; ; )
+    {
+        int i = 0;
+        cout << "нажмите 1 чтобы ввести структуру с экрана\n";
+        cout << "нажмите 2 чтобы сортировать структуру\n";
+        cout << "нажмите 3 чтобы печатать структуру\n";
+        cin >> x;
+        switch (x)
+        {
+        case 1:
+            print_type(fm);
+            break;
+        case 2:
+            sort(fm);
+            break;
+        case 3:
+            print(fm);
+            break;
+        default:
+            cout << "введите другое значение\n";
+            break;
+        }
+    }
+    //return main();
 }
+
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
