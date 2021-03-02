@@ -1,10 +1,6 @@
 ﻿// lab 2 (2).cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-
 #include "Header.h"
-
-
-
 
 int main()
 {
@@ -19,9 +15,6 @@ int main()
         cin >> x;
         switch (x)
         {
-        case 1:
-            print_type(fm);
-            break;
         case 2:
             sort(fm);
             break;
