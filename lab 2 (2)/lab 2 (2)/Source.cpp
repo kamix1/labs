@@ -1,48 +1,10 @@
 #ifndef exe
 #define exe
-#include "Header.h"
+#include "Struct.h"
+#include "include.h"
 
 
-void sort(firms fm[])
-{
-    for (int i = 0; i < N; i++)
-        for (int j = 0; j < N - 1; j++)
-        {
-            if (fm[j].name > fm[j + 1].name) swap(fm[j], fm[j + 1]);
-        }
-#ifdef DEBUG
-    {
-        cout << __DATE__ << endl;
-        cout << __TIME__ << endl;
-        cout << __FUNCTION__ << endl;
-        cout << __FILE__ << endl;
 
-    }
-#endif
-}
-void print(firms fm[])
-{
-    printf("-------------------------------------------------------------------------\n");
-    printf("|Фирмы - производители СКБД                                             |\n");
-    printf("|-----------------------------------------------------------------------|\n");
-    printf("| Фирма     | Количество продуктов | годовой объем продаж | часть рынка |\n");
-    printf("|-----------|----------------------|----------------------|-------------|\n");
-    for (int i = 0; i < N; i++)
-    {
-        printf("| %9s | %20d | %20d | %-11.1f |\n",
-            fm[i].name.c_str(), fm[i].num, fm[i].sold, fm[i].market);
-        printf("|-----------|----------------------|----------------------|-------------|\n");
-    }
-#ifdef DEBUG
-    {
-        cout << __DATE__ << endl;
-        cout << __TIME__ << endl;
-        cout << __FUNCTION__ << endl;
-        cout << __FILE__ << endl;
-
-    }
-#endif
-}
 void PRINT_hand()
 {
     for (int i = 0; i < N; i++) {
@@ -66,8 +28,20 @@ void PRINT_rand()
         fm[i].market = (rand() % 50 + 100);
     }
 }
-void PRINT_TYPE_RAND()
+
+void print()
 {
+    printf("-------------------------------------------------------------------------\n");
+    printf("|Фирмы - производители СКБД                                             |\n");
+    printf("|-----------------------------------------------------------------------|\n");
+    printf("| Фирма     | Количество продуктов | годовой объем продаж | часть рынка |\n");
+    printf("|-----------|----------------------|----------------------|-------------|\n");
+    for (int i = 0; i < N; i++)
+    {
+        printf("| %9s | %20d | %20d | %-11.1f |\n",
+            fm[i].name.c_str(), fm[i].num, fm[i].sold, fm[i].market);
+        printf("|-----------|----------------------|----------------------|-------------|\n");
+    }
 #ifdef DEBUG
     {
         cout << __DATE__ << endl;
@@ -76,13 +50,15 @@ void PRINT_TYPE_RAND()
         cout << __FILE__ << endl;
 
     }
-#endif
-#ifdef PRINT_TYPE
-    PRINT_rand();
 #endif
 }
-void PRINT_TYPE_HAND()
+void sort()
 {
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N - 1; j++)
+        {
+            if (fm[j].name > fm[j + 1].name) swap(fm[j], fm[j + 1]);
+        }
 #ifdef DEBUG
     {
         cout << __DATE__ << endl;
@@ -91,9 +67,6 @@ void PRINT_TYPE_HAND()
         cout << __FILE__ << endl;
 
     }
-#endif
-#ifdef PRINT_TYPE
-    PRINT_hand();
 #endif
 }
 #endif

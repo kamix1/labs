@@ -1,25 +1,31 @@
 ﻿// lab 2 (2).cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-#include "Header.h"
+#include "Source.h"
+#include "include.h"
 
 int main()
 {
     setlocale(LC_ALL, "rus");
     int x;
+#ifdef PRINT_TYPE
+    PRINT_rand();
+#endif
+#ifndef PRINT_TYPE
+    PRINT_hand();
+#endif
     for ( ; ; )
     {
         int i = 0;
-        cout << "нажмите 1 чтобы ввести структуру с экрана\n";
-        cout << "нажмите 2 чтобы сортировать структуру\n";
-        cout << "нажмите 3 чтобы печатать структуру \n";
+        cout << "нажмите 1 чтобы сортировать структуру\n";
+        cout << "нажмите 2 чтобы печатать структуру \n";
         cin >> x;
         switch (x)
         {
-        case 2:
-            sort(fm);
+        case 1:
+            sort();
             break;
-        case 3:
-            print(fm);
+        case 2:
+            print();
             break;
         default:
             cout << "введите другое значение\n";
