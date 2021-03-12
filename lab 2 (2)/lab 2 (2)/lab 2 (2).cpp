@@ -1,7 +1,12 @@
 ﻿// lab 2 (2).cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 #include "Source.h"
-#include "include.h"
+#include <iostream>
+#include <stdlib.h>
+#include <string>
+#include <string.h>
+#define PRINT_TYPE
+using namespace std;
 
 int main()
 {

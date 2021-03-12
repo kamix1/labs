@@ -1,5 +1,9 @@
 #pragma once
-#include "include.h"
+#ifndef XT
+#define XT
+#include <string>
+using namespace std;
+
 struct firms
 {
     string name;
@@ -7,3 +11,4 @@ struct firms
     int sold;
     float market;
 } fm[20]{};
+#endif

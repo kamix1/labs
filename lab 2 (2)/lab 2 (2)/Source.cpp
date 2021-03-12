@@ -1,9 +1,11 @@
 #ifndef exe
 #define exe
 #include "Struct.h"
-#include "include.h"
-
-
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+#define N 7
+#define DEBUG
 
 void PRINT_hand()
 {
@@ -31,6 +33,15 @@ void PRINT_rand()
 
 void print()
 {
+#ifdef DEBUG
+    {
+        cout << __DATE__ << endl;
+        cout << __TIME__ << endl;
+        cout << __FUNCTION__ << endl;
+        cout << __FILE__ << endl;
+
+    }
+#endif
     printf("-------------------------------------------------------------------------\n");
     printf("|Фирмы - производители СКБД                                             |\n");
     printf("|-----------------------------------------------------------------------|\n");
@@ -42,15 +53,7 @@ void print()
             fm[i].name.c_str(), fm[i].num, fm[i].sold, fm[i].market);
         printf("|-----------|----------------------|----------------------|-------------|\n");
     }
-#ifdef DEBUG
-    {
-        cout << __DATE__ << endl;
-        cout << __TIME__ << endl;
-        cout << __FUNCTION__ << endl;
-        cout << __FILE__ << endl;
 
-    }
-#endif
 }
 void sort()
 {
